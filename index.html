@@ -13,39 +13,13 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0d0819, #1a1033, #2d1b69, #1a1033, #0d0819);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            /* background: linear-gradient(135deg, #667eea, #764ba2); */
+            background: #000000;
             color: white;
             min-height: 100vh;
             padding: 20px;
             position: relative;
             overflow-x: hidden;
-        }
-
-        /* Создаем эффект постепенного переливания */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, 
-                rgba(45, 27, 105, 0.8) 0%,
-                rgba(26, 16, 51, 0.9) 25%,
-                rgba(13, 8, 25, 1) 50%,
-                rgba(26, 16, 51, 0.9) 75%,
-                rgba(45, 27, 105, 0.8) 100%);
-            background-size: 400% 400%;
-            animation: gradient 20s ease infinite;
-            z-index: -1;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         .container {
@@ -62,17 +36,17 @@
         }
 
         .title {
-            color: #8a2be2;
-            font-size: 4.5rem;
-            font-weight: bold;
-            text-shadow: 0 0 10px #8a2be2;
+            color: #ffffff;
+            font-size: 5rem;
+            font-weight: 900;
             margin-bottom: 30px;
+            letter-spacing: 2px;
         }
 
         .cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 25px;
             margin-bottom: 40px;
             max-width: 900px;
             margin-left: auto;
@@ -80,10 +54,9 @@
         }
 
         .card {
-            background: rgba(138, 43, 226, 0.15);
-            border: 1px solid #8a2be2;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 25px 20px;
+            padding: 30px 25px;
             text-align: center;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
@@ -91,51 +64,55 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            min-height: 180px;
+            min-height: 200px;
         }
 
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
-            background: rgba(138, 43, 226, 0.25);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .card h3 {
-            color: #8a2be2;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            text-shadow: 0 0 8px #8a2be2;
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
 
         .card p {
-            color: white;
-            line-height: 1.6;
-            font-size: 1rem;
+            color: #e0e0e0;
+            line-height: 1.7;
+            font-size: 1.1rem;
             flex-grow: 1;
+            font-weight: 500;
         }
 
         .telegram-btn {
             background: linear-gradient(135deg, #0088cc, #00a2e8);
             color: white;
             border: none;
-            padding: 12px 30px;
+            padding: 15px 35px;
             border-radius: 25px;
-            font-size: 1rem;
-            font-weight: bold;
+            font-size: 1.1rem;
+            font-weight: 800;
             cursor: pointer;
             transition: all 0.3s ease;
             display: block;
             margin: 0 auto 50px auto;
             text-decoration: none;
             text-align: center;
-            max-width: 250px;
+            max-width: 280px;
             position: relative;
             overflow: hidden;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
         }
 
         .telegram-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.4);
+            box-shadow: 0 12px 25px rgba(0, 136, 204, 0.5);
             background: linear-gradient(135deg, #00a2e8, #0088cc);
         }
 
@@ -146,7 +123,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.5s;
         }
 
@@ -156,44 +133,46 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            color: #8a2be2;
-            margin: 50px 0 30px 0;
-            text-shadow: 0 0 10px #8a2be2;
+            font-size: 3rem;
+            color: #ffffff;
+            margin: 60px 0 40px 0;
+            font-weight: 900;
+            letter-spacing: 1.5px;
         }
 
         .form-container {
-            background: rgba(138, 43, 226, 0.15);
-            border: 1px solid #8a2be2;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 30px;
+            padding: 35px;
             max-width: 600px;
             margin: 0 auto 50px auto;
             backdrop-filter: blur(10px);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
-            color: #8a2be2;
-            font-weight: bold;
-            text-shadow: 0 0 5px #8a2be2;
+            margin-bottom: 12px;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #8a2be2;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
             color: white;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
             transition: all 0.3s ease;
         }
 
@@ -201,9 +180,8 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #9370db;
-            box-shadow: 0 0 15px rgba(147, 112, 219, 0.6);
-            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.2);
         }
 
         /* Стили для выпадающего списка */
@@ -211,47 +189,49 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238a2be2'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
             background-repeat: no-repeat;
-            background-position: right 12px center;
-            background-size: 16px;
-            padding-right: 40px;
+            background-position: right 15px center;
+            background-size: 18px;
+            padding-right: 45px;
         }
 
         .form-group select option {
-            background: #2d1b69;
+            background: #000000;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 12px;
+            font-weight: 500;
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 140px;
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, #8a2be2, #9370db);
-            color: white;
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            color: #000000;
             border: none;
-            padding: 15px 40px;
+            padding: 18px 45px;
             border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            font-size: 1.2rem;
+            font-weight: 900;
             cursor: pointer;
             transition: all 0.3s ease;
             display: block;
-            margin: 30px auto 0 auto;
+            margin: 35px auto 0 auto;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             position: relative;
             overflow: hidden;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.5);
-            background: linear-gradient(135deg, #9370db, #8a2be2);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, #e0e0e0, #ffffff);
         }
 
         .submit-btn::before {
@@ -261,7 +241,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
             transition: left 0.5s;
         }
 
@@ -275,10 +255,9 @@
         }
 
         .portfolio-item {
-            background: rgba(138, 43, 226, 0.15);
-            border: 1px solid #8a2be2;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 30px;
+            padding: 35px;
             max-width: 800px;
             margin: 0 auto;
             backdrop-filter: blur(10px);
@@ -287,18 +266,18 @@
         .portfolio-image {
             width: 100%;
             max-width: 600px;
-            height: 300px;
-            background: linear-gradient(135deg, #8a2be2, #9370db);
-            border-radius: 10px;
-            margin: 0 auto 20px auto;
+            height: 320px;
+            background: linear-gradient(135deg, #333333, #666666);
+            border-radius: 12px;
+            margin: 0 auto 25px auto;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
-            border: 2px solid #8a2be2;
+            font-size: 1.3rem;
             position: relative;
             overflow: hidden;
+            font-weight: 600;
         }
 
         .portfolio-image::before {
@@ -308,7 +287,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
             animation: shine 3s infinite;
         }
 
@@ -318,56 +297,65 @@
         }
 
         .portfolio-description {
-            color: white;
-            line-height: 1.6;
-            font-size: 1.1rem;
+            color: #e0e0e0;
+            line-height: 1.7;
+            font-size: 1.2rem;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
             .title {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
             
             .section-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .cards {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 20px;
                 max-width: 500px;
             }
             
             .form-container {
-                padding: 20px;
+                padding: 25px;
             }
             
             .card {
-                min-height: 160px;
-                padding: 20px 15px;
+                min-height: 180px;
+                padding: 25px 20px;
             }
             
             .telegram-btn {
-                max-width: 200px;
-                padding: 10px 25px;
+                max-width: 250px;
+                padding: 12px 30px;
+            }
+            
+            .card h3 {
+                font-size: 1.6rem;
             }
         }
 
         @media (max-width: 480px) {
             .title {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             
             .card h3 {
-                font-size: 1.3rem;
+                font-size: 1.4rem;
             }
             
             .card p {
-                font-size: 0.95rem;
+                font-size: 1rem;
             }
             
             .cards {
                 max-width: 400px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -376,7 +364,7 @@
     <div class="container">
         <!-- Заголовок -->
         <header class="header">
-            <h1 class="title">Программирование</h1>
+            <h1 class="title">ПРОГРАММИРОВАНИЕ</h1>
         </header>
 
         <!-- Карточки с услугами -->
@@ -405,7 +393,7 @@
         </a>
 
         <!-- Форма заявки -->
-        <h2 class="section-title">Заявка</h2>
+        <h2 class="section-title">ЗАЯВКА</h2>
         <div class="form-container">
             <form id="applicationForm">
                 <div class="form-group">
@@ -433,7 +421,7 @@
         </div>
 
         <!-- Примеры работ -->
-        <h2 class="section-title">Примеры работ</h2>
+        <h2 class="section-title">ПРИМЕРЫ РАБОТ</h2>
         <section class="portfolio">
             <div class="portfolio-item">
                 <div class="portfolio-image">
