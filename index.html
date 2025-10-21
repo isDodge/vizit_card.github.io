@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Программирование - Мои услуги</title>
+    <title>Мои услуги</title>
     <style>
         * {
             margin: 0;
@@ -69,7 +69,7 @@
 
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 40px rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.15);
         }
 
@@ -112,7 +112,7 @@
 
         .telegram-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(0, 136, 204, 0.5);
+            box-shadow: 0 12px 25px rgba(0, 136, 204, 0.575);
             background: linear-gradient(135deg, #00a2e8, #0088cc);
         }
 
@@ -180,7 +180,7 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.164);
             background: rgba(255, 255, 255, 0.2);
         }
 
@@ -194,14 +194,24 @@
             background-position: right 15px center;
             background-size: 18px;
             padding-right: 45px;
+            border-radius: 10px;
+            cursor: pointer;
         }
 
         .form-group select option {
-            background: #000000;
+            background: #272727;
             color: white;
             border: none;
             padding: 12px;
             font-weight: 500;
+        }
+
+        .form-group select:hover {
+            background: rgba(255, 255, 255, 0.25); /* Светло-серый при наведении */
+        }
+
+        .form-group select:focus {
+            background: rgba(255, 255, 255, 0.25); /* Светло-серый при фокусе */
         }
 
         .form-group textarea {
@@ -230,7 +240,7 @@
 
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0px 30px rgba(255, 255, 255, 0.3);
             background: linear-gradient(135deg, #e0e0e0, #ffffff);
         }
 
@@ -364,7 +374,7 @@
     <div class="container">
         <!-- Заголовок -->
         <header class="header">
-            <h1 class="title">ПРОГРАММИРОВАНИЕ</h1>
+            <h1 class="title">МОИ УСЛУГИ</h1>
         </header>
 
         <!-- Карточки с услугами -->
